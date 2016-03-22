@@ -1,0 +1,287 @@
+$color-main = rgba(32, 110, 225, 1)
+$color-contrast = rgba(255, 166, 15, 1)
+
+valign()
+  position: relative
+  top: 50%
+  transform: translateY(-50%)
+  
+hover-grow()
+  transition: .4s ease all
+  &:hover
+    transform: scale(1.2, 1.2)
+    
+vhcenter($width, $height)
+  width: $width
+  height: $height
+  top: 'calc(50% - %s)' % ($height / 2)
+  left: 'calc(50% - %s)' % ($width /2)
+
+body, html
+  padding: 0
+  margin: 0
+  background-color: $color-main
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+a
+  color: #00B7FF
+
+.title-text
+  color: $color-contrast
+  font-size: 45px
+  text-align: center
+  
+.main-title
+  margin-top: 10px
+  color: white
+  font-size: 45px
+  text-align: center
+  
+.wrapper
+  position: fixed
+  width: 75%
+  height: calc(100% - 50px)
+  margin-top: 10px
+  margin-left: calc(25% / 2)
+  text-align: center
+  background: white
+  border-radius: 20px
+  
+.button-landing
+  color: white
+  font-size: 25px
+  background: $color-contrast
+  float: right
+  padding: 10px
+  margin: 10px 15px 10px 10px
+  border-radius: 15%
+  cursor: default
+  hover-grow()
+  
+.button-landing-center
+  color: white
+  display: inline-block
+  font-size: 25px
+  background: $color-contrast
+  padding: 10px
+  margin: 10px 15px 10px 10px
+  border-radius: 15%
+  cursor: default
+  hover-grow()
+  
+.votes-window
+  position: absolute
+  width: 75%
+  margin-left: (25% / 2%)
+  height: calc(100% - 150px)
+  top: 150px
+  overflow-y: scroll
+  border-top: 2px solid black
+  
+.vote
+  position: relative
+  background: $color-contrast
+  width: 75%
+  padding: 20px
+  border: 2px solid black
+  hover-grow()
+  margin: 10px 10px 10px calc(12.5% - 20px)
+  
+.vote-title
+  position: absolute
+  top: 0
+  left: 0
+  font-size: 2em
+  width: 100%
+  height: 100%
+  & .text-valign
+    font-size: 1em
+  
+.voteThing1
+  float: left
+  width: 50%
+
+.voteThing2
+  float: right
+  width: 50%
+  
+.vs-title
+  position: absolute
+  width: 100%
+  height: 100%
+  left: 0
+  color: white
+  font-size: 2em
+  transform: translateY(-50%)
+  
+#screen
+  position: fixed
+  top: 0
+  height: 100%
+  width: 100%
+  background: rgba(255, 255, 255, .5)
+  z-index: 100
+  
+#loginWindow
+  position: absolute
+  vhcenter(500px, 250px)
+  background: white
+  border-radius: 15%
+  top: 'calc(50% * %s)' %250px
+  border: 2px solid black
+  
+#loginWindow input
+  display: block
+  width: 250px
+  
+#login-exit
+  position: absolute
+  float: left
+  width: 50px
+  height: 50px
+  left: -10px
+  background: black
+  color: white
+  border-radius: 50%
+  text-align: center
+  cursor: default
+  hover-grow()
+  
+.text-valign
+  valign()
+  font-size: 1.5em
+  
+#login-inputs
+  position: relative
+  vhcenter(400px, 150px)
+  
+#login-inputs input
+  width: 200px
+  margin-left: 100px
+
+#welcome
+  position: fixed
+  vhcenter(75%, 75%)
+  background: white
+  
+.new-button
+  position: absolute
+  float: left
+  width: 100px
+  height: 100px
+  left: 1em
+  top: 1em
+  background: $color-contrast
+  border-radius: 50%
+  border: 2px solid white
+  text-align: center
+  color: white
+  cursor: default
+  hover-grow()
+  
+.new-button div
+  transition: .4s ease all
+  
+.new-button:hover div
+  font-size: 4em
+  
+#home
+  font-size: 2em
+  margin-left: 150px
+  margin-top: 50px
+  
+  
+.vs
+  font-size: 2em
+  margin-left: 20px
+  margin-right: 20px
+  color: white
+  
+.vote-form
+  position: absolute
+  vhcenter(500px, 500px)
+  background: white
+  border-radius: 15%
+  top: 'calc(50% * %s)' %500px
+  border: 2px solid black
+  font-size: 2em
+  text-align: center
+
+.vote-form input
+  width: 70%
+  height: 30px
+  border-radius: 20px
+  font-size: 30px
+  padding: 5px
+  text-align: center
+  &::-webkit-input-placeholder {
+   color: $color-contrast;
+   text-align: center
+  }
+  &::-moz-placeholder {
+   color: $color-contrast;
+   text-align: center
+  }
+  &::-ms-input-placeholder {
+   color: $color-contrast;
+   text-align: center
+  }
+
+.create-wrapper
+  position: relative
+  width: 400px
+  height: 400px
+  top: 50px
+  left: 50px
+  
+.detail-wrapper
+  position: absolute
+  vhcenter(75%, 90%)
+  background: white
+  border-radius: 15%
+  top: 'calc(50% * %s)' %90%
+  border: 2px solid black
+  font-size: 2em
+  text-align: center
+  
+.detail-title
+  position: absolute
+  width: 80%
+  left: 10%
+  height: 18%
+  padding: 1%
+  & .title
+    font-size: 1.5em
+  & .author
+    font-size: .5em
+
+.detail-left
+  position: absolute
+  width: 50%
+  height: 80%
+  top: 20%
+
+.detail-right
+  position: absolute
+  width: 50%
+  height: 80%
+  left: 50%;
+  top: 20%
+  
+.detail-thing
+  vhcenter(100%, 50%)
+
+.sort-bar
+  position: relative
+  top: 110px
+  width: 75%
+  left: 12.5%
+  
+.sort-inactive
+  color: $color-contrast
+  
+.sort-active
+  color: $color-contrast
+  font-size: 1.5em
+  
+.current-votes
+  font-size: .5em
